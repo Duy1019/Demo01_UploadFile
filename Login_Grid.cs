@@ -7,18 +7,20 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Remote;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 
 namespace Demo01_UploadFile
 {
-	public class Login : BaseTest_Grid
+	
+	public class Login_Grid : BaseTest_Grid
 	{
-		public Login () : base() { }
+		public Login_Grid () : base() { }
 
 		[TestCase("duy01", "a123456")]
 		[TestCase("duy01", "")]
 		[TestCase("", "a123456")]
-		[TestCase("admin' OR '1'='1", "")] // SQL Injection
-		[TestCase("admin'; --", "a123456")]
+		[TestCase("admin' OR '1'='1", "abc1234")] // SQL Injection
+		[TestCase("admin'; --", "abc1234")]
 		public void LoginTest(string username, string password)
 		{
 			Console.WriteLine("Đang đăng nhập ...");
@@ -38,6 +40,9 @@ namespace Demo01_UploadFile
 			Assert.IsTrue(logoutLink.Text.Contains("duy01, Logout"), "Đăng nhập thất bại");
 			Console.WriteLine("Đăng nhập thành công. Logout link: " + logoutLink.Text);
 		}
+
+		
+
 
 	}
 }

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Microsoft.VisualStudio.TestPlatform.ObjectModel;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
@@ -113,6 +114,11 @@ namespace Demo01_UploadFile
 				Console.WriteLine("Không thêm được sản phẩm. Lỗi: " + ex.Message);
 			}
 		}
+
+		
+
+
+
 
 
 	}
