@@ -17,6 +17,8 @@ namespace Demo01_UploadFile
 	[TestFixture("Chrome", "127.0", "Windows 11", "Chrome127")]
 	public class CreateProduct : BaseTest_Lambda
 	{
+		// Test github
+
 		// Do chạy song song nên sẽ gặp lỗi trùng tên sản phẩm, run 2 cái 1 lần là Pass
 
 		// Kế thừa lớp cha cho code gọn hơn
