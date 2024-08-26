@@ -54,7 +54,7 @@ namespace Demo01_UploadFile
 			ltOptions.Add("tunnel", true);
 
 			// Thêm file upload nếu cần
-			String[] ltFile = new string[] { "iphone-12-white-600x600.jpg", "macbook-air-m1-2020-gray-600x600.jpg" };
+			String[] ltFile = new string[] { "iphone-12-white-600x600.jpg", "macbook-air-m1-2020-gray-600x600.jpg", "realmiphone.jfif" };
 			ltOptions.Add("lambda:userFiles", ltFile);
 
 			capability.AddAdditionalOption("LT:Options", ltOptions);
@@ -64,6 +64,7 @@ namespace Demo01_UploadFile
 			_driver = new RemoteWebDriver(url, capability);
 
 			wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
+			_driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
 			js = (IJavaScriptExecutor)_driver;
 			_driver.Manage().Window.Maximize();
 

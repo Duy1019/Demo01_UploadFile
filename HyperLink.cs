@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace Demo01_UploadFile
 {
-	// Chạy thông thường, không Grid, không LT
+	// Grid
 	[TestFixture("Chrome")]
 	[TestFixture("Firefox")]
 	[TestFixture("MicrosoftEdge")]

@@ -16,6 +16,7 @@ namespace Demo01_UploadFile
 {
 	internal class MyTestThings
 	{
+		// Test những thứ khác
 		private string _projectFolderPath;
 		private string _imageFolderPath;
 
